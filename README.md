@@ -29,12 +29,12 @@ steps:
 
 #### heroku_api_key
 
-The kubernetes API server URL (no trailing slash should be used), alternately mount a kubeconfig into the container `/root/.kube/config`
+The api key for Heroku.
 
 #### heroku_process_type
 
-The token used to auth against the kubernetes API, alternately mount a kubeconfig into the container `/root/.kube/config`
+The process type to deploy the container to, defaults to `web`.
 
 #### heroku_app_name
 
-The kubernetes deployment configuration file location relative to the root folder of the repo, defaults to `injected_deployment.yaml`
+The app name to deploy the container to.
