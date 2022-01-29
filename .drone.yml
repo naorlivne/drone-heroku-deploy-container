@@ -14,10 +14,10 @@ steps:
     - npm install -g heroku
     - sh drone_heroku_deploy_container.sh
   environment:
-    heroku_api_key:
+    plugin_heroku_api_key:
       from_secret: heroku_api_key
-    heroku_process_type: worker
-    heroku_app_name: test-container
+    plugin_heroku_process_type: worker
+    plugin_heroku_app_name: test-container
 
 ---
 kind: pipeline
