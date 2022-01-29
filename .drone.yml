@@ -8,8 +8,12 @@ platform:
 
 steps:
 - name: drone_heroku_deploy_container_test
-  image: naorlivne/drone-heroku-deploy-container
-  settings:
+  image: node:17.4.0-alpine3.15
+  commands:
+    - apk add --no-cache git
+    - npm install -g heroku
+    - sh drone_heroku_deploy_container.sh
+  environment:
     heroku_api_key:
       from_secret: heroku_api_key
     heroku_process_type: worker
