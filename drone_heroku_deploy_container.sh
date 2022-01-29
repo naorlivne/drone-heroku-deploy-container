@@ -4,8 +4,6 @@
 set -e
 set -x
 
-# we need to alias podman to docker
-alias docker=podman
 
 # set the heroku token environment variables
 export HEROKU_API_KEY="${PLUGIN_HEROKU_API_KEY}"

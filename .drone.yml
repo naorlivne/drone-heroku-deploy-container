@@ -10,15 +10,20 @@ steps:
 - name: drone_heroku_deploy_container_test
   image: node:17.4.0-alpine3.15
   commands:
-    - apk add --no-cache git openrc podman
-    - rc-update add cgroups
-    - npm install -g heroku
+    - apk add --no-cache git
     - sh drone_heroku_deploy_container.sh
   environment:
+    DOCKER_HOST: unix:///drone/docker.sock
     PLUGIN_HEROKU_API_KEY:
       from_secret: heroku_api_key
     PLUGIN_HEROKU_PROCESS_TYPE: worker
     PLUGIN_HEROKU_APP_NAME: test-container
+
+services:
+  docker:
+    image: docker:dind
+    privileged: true
+    command: [ '-H', 'unix:///drone/docker.sock' ]
 
 ---
 kind: pipeline
