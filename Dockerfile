@@ -9,7 +9,7 @@ RUN apk add --no-cache git openrc podman
 
 # podman requires enabling cgroups
 RUN rc-update add cgroups
-RUN rc-service cgroups start
+RUN rc-service cgroups restart
 
 # now we install the heroku
 RUN npm install -g heroku
