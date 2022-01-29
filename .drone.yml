@@ -20,10 +20,10 @@ steps:
     PLUGIN_HEROKU_APP_NAME: test-container
 
 services:
-  docker:
-    image: docker:dind
-    privileged: true
-    command: [ '-H', 'unix:///drone/docker.sock' ]
+- name: docker:
+  image: docker:dind
+  privileged: true
+  command: [ '-H', 'unix:///drone/docker.sock' ]
 
 ---
 kind: pipeline
