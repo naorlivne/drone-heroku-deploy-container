@@ -5,7 +5,7 @@ set -e
 set -x
 
 # set the heroku token environment variables
-HEROKU_API_KEY="${PLUGIN_HEROKU_API_KEY}"
+export HEROKU_API_KEY="${PLUGIN_HEROKU_API_KEY}"
 
 # set the process type
 if [ -z "${PLUGIN_HEROKU_PROCESS_TYPE}" ]
