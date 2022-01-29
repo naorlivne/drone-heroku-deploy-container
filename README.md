@@ -10,6 +10,7 @@ This plugin can be used to deploy container images to Heroku.
 
 The below pipeline configuration demonstrates simple usage:
 
+> You will have to make sure to first push you're image to registry.heroku.com/<app>/<process-type> first, this plugin only does Heroku release stage.
 
 ```yaml
 kind: pipeline
