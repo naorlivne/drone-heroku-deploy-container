@@ -1,0 +1,38 @@
+# How to contribute
+
+Being an open source project means any help offered will be greatly appreciated, below is a quick run through of how you
+can help
+
+## Getting Started
+
+* Fork the latest branch of the component you want to contribute to
+* Make sure you have a [GitHub account](https://github.com/signup/free)
+* Fix the issue you need \ add a feature
+* Create a pull request
+* Once merged the next version release will have your changes in it
+
+## Design philosophy
+drone-heroku-deploy-container is designed with the following philosophy in mind, any feature\pull requests will be judged against the following:
+
+* Follow Linux philosophy and have each component do one thing & one thing only.
+* Reliability is more important then shiny new features.
+
+### Documentation
+
+drone-heroku-deploy-container docs are hosted at the repo README.md, reading them is highly recommended
+prior to making any pull requests
+
+## What you can help with
+
+* Documentation - everyone hates them but without them would you be able to figure out how to use drone-heroku-deploy-container?
+* Bug fixes / feature requests - anything off github issues lists
+* Submitting tickets - even if you don't have the time\knowledge to fix a bug just opening a github issue about it will greatly help
+* Suggesting improvements
+* Spreading the word
+
+### Summary
+
+* Your awesome for helping, thanks.
+
+P.S.
+Don't forget to add yourself to to CONTRIBUTORS.md file.

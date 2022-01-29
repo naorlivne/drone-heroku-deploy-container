@@ -1,2 +1,3 @@
 # drone-heroku-deploy-container
-A drone plugin to deploy Docker containers to Heroku
+
+A Drone CI/CD container for deploying images to Heroku.
