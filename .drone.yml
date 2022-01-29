@@ -11,6 +11,7 @@ steps:
   image: node:17.4.0-alpine3.15
   commands:
     - apk add --no-cache git
+    - npm install -g heroku
     - sh drone_heroku_deploy_container.sh
   environment:
     PLUGIN_HEROKU_API_KEY:
