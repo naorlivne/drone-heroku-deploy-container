@@ -4,8 +4,8 @@ FROM node:17.4.0-alpine3.15
 # first we need to copy everything
 COPY . /drone-heroku-deploy-container
 
-# Heroku cli requires git installed as well as podman to build the containers
-RUN apk add --no-cache git podman
+# Heroku cli requires git installed as well as podman to build the containers which requires openrc to configure rcgroups
+RUN apk add --no-cache git openrc podman
 
 # podman requires enabling cgroups
 RUN rc-update add cgroups

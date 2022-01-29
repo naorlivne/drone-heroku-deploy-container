@@ -10,7 +10,7 @@ steps:
 - name: drone_heroku_deploy_container_test
   image: node:17.4.0-alpine3.15
   commands:
-    - apk add --no-cache git podman
+    - apk add --no-cache git openrc podman
     - rc-update add cgroups
     - rc-service cgroups start
     - npm install -g heroku
