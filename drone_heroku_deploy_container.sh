@@ -14,5 +14,5 @@ PLUGIN_HEROKU_PROCESS_TYPE="web"
 fi
 
 # run kubectl apply on the variable injected yaml config file
-heroku --exit-code container:push "${PLUGIN_HEROKU_PROCESS_TYPE}" --app "${PLUGIN_HEROKU_APP_NAME}"
-heroku --exit-code container:release "${PLUGIN_HEROKU_PROCESS_TYPE}" --app "${PLUGIN_HEROKU_APP_NAME}"
+heroku container:push "${PLUGIN_HEROKU_PROCESS_TYPE}" --app "${PLUGIN_HEROKU_APP_NAME}" --exit-code
+heroku container:release "${PLUGIN_HEROKU_PROCESS_TYPE}" --app "${PLUGIN_HEROKU_APP_NAME}" --exit-code
