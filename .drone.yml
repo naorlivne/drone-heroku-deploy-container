@@ -7,6 +7,24 @@ platform:
   arch: amd64
 
 steps:
+- name: drone_heroku_deploy_container_test
+  image: naorlivne/drone-heroku-deploy-container
+  settings:
+    heroku_api_key:
+      from_secret: heroku_api_key
+    heroku_process_type: worker
+    heroku_app_name: test-container
+
+---
+kind: pipeline
+type: docker
+name: amd64_build
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
 - name: docker_build_version
   image: plugins/docker
   when:
@@ -23,6 +41,9 @@ steps:
     tags:
       - linux-amd64
       - linux-amd64-v${DRONE_BUILD_NUMBER}
+
+depends_on:
+- drone_heroku_deploy_container_test
 
 ---
 kind: pipeline
@@ -51,6 +72,9 @@ steps:
       - linux-arm64
       - linux-arm64-v${DRONE_BUILD_NUMBER}
 
+depends_on:
+- drone_heroku_deploy_container_test
+
 ---
 kind: pipeline
 type: docker
@@ -77,6 +101,10 @@ steps:
     tags:
       - linux-arm
       - linux-arm-v${DRONE_BUILD_NUMBER}
+
+depends_on:
+- drone_heroku_deploy_container_test
+
 
 ---
 kind: pipeline
