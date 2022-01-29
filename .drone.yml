@@ -1,6 +1,6 @@
 kind: pipeline
 type: docker
-name: amd64_build
+name: drone_heroku_deploy_container_test
 
 platform:
   os: linux
