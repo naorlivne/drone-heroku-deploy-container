@@ -12,7 +12,6 @@ steps:
   commands:
     - apk add --no-cache git openrc podman
     - rc-update add cgroups
-    - rc-service cgroups restart
     - npm install -g heroku
     - sh drone_heroku_deploy_container.sh
   environment:
