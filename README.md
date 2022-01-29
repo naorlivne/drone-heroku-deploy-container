@@ -20,7 +20,8 @@ steps:
 - name: drone_heroku_deploy_container
   image: naorlivne/drone-heroku-deploy-container
   settings:
-    heroku_api_key: my...vary...long...kube...token_that_one_should_really_pass_as_a_secret
+    heroku_api_key: 
+      from_secret: my...vary...long...kube...token
     heroku_process_type: web
     heroku_app_name: my_amazing_app
 ```
