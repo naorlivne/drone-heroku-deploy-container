@@ -2,7 +2,7 @@
 
 CI/CD build status: [![Build Status](https://cloud.drone.io/api/badges/naorlivne/drone-heroku-deploy-container/status.svg)](https://cloud.drone.io/naorlivne/drone-heroku-deploy-container)
 
-Drone plugin for publishing container images to Heroku, behind the scenes it uses heroku CLI to run `heroku container:push` and `heroku container:release` commands.
+Drone plugin for publishing container images to Heroku, behind the scenes it uses heroku CLI to run `heroku container:release` commands.
 
 ## Usage
 

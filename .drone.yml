@@ -12,26 +12,11 @@ steps:
   commands:
     - apk add --no-cache git
     - sh drone_heroku_deploy_container.sh
-  volumes:
-    - name: dockersock
-      path: /var/run
   environment:
     PLUGIN_HEROKU_API_KEY:
       from_secret: heroku_api_key
     PLUGIN_HEROKU_PROCESS_TYPE: worker
     PLUGIN_HEROKU_APP_NAME: test-container
-
-services:
-- name: docker
-  image: docker:dind
-  privileged: true
-  volumes:
-  - name: dockersock
-    path: /var/run
-
-volumes:
-- name: dockersock
-  temp: {}
 
 ---
 kind: pipeline
