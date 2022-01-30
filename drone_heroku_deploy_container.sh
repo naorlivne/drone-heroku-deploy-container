@@ -2,11 +2,13 @@
 
 # stop on first failure
 set -e
-set -x
 
 
 # set the heroku token environment variables
 export HEROKU_API_KEY="${PLUGIN_HEROKU_API_KEY}"
+
+# now that the export of secret info is done let's being done
+set -x
 
 # set the process type
 if [ -z "${PLUGIN_HEROKU_PROCESS_TYPE}" ]
