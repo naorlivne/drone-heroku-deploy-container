@@ -1,3 +1,6 @@
+> **Warning**
+> Heroku stopping free tier means I can no longer fully test this nor will I longer have any use of it, as a result I'm stopping all development of this plugin.
+
 # drone-heroku-deploy-container
 
 CI/CD build status: [![Build Status](https://cloud.drone.io/api/badges/naorlivne/drone-heroku-deploy-container/status.svg)](https://cloud.drone.io/naorlivne/drone-heroku-deploy-container)
